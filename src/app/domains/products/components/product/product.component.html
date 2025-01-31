@@ -1,12 +1,14 @@
-<article class="transition-transform border shadow-sm w-fit h-fit rounded-xl hover:scale-105 hover:cursor-pointer">
+<article class="border shadow-sm w-fit h-fit rounded-xl hover:cursor-pointer">
   <img
     class="rounded-t-xl"
-    [src]="img"
-    alt=""
+    [src]="product?.image"
+    [alt]="product?.title"
   >
   <div class="px-4 py-2">
-    <h3 class="text-xl font-bold">Nombre Producto</h3>
-    <p>Descripcion del producto</p>
-    <p>$0.00</p>
+    <h3 class="text-xl font-bold">{{product?.title}}</h3>
+    <p>{{product?.description}}</p>
+    <p>${{product?.amount}}</p>
+    <button class="text-white bg-indigo-500 font-bold rounded-lg px-5 py-2 hover:bg-indigo-700">Agregar</button>
   </div>
+
 </article>

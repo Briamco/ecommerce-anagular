@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from '../../../shared/models/Product';
 
 @Component({
   selector: 'product-card',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
-  img = `https://picsum.photos/640/640?r=${Math.random()}`
+
+  @Input() product: Product | undefined;
+
 }
